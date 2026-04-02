@@ -90,7 +90,6 @@
             color: var(--primary-color);
         }
 
-        /* 画像セクションのスタイル */
         .visual-image-container {
             margin-top: 20px;
             text-align: center;
@@ -153,6 +152,26 @@
             font-size: 1.4em;
         }
 
+        /* スケジュール用スタイル */
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin-top: 20px;
+        }
+
+        .schedule-item {
+            display: flex;
+            margin-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 10px;
+        }
+
+        .schedule-date {
+            min-width: 140px;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
         .footer-note {
             font-size: 0.85em;
             color: #777;
@@ -172,6 +191,8 @@
         @media (max-width: 600px) {
             .card-container { flex-direction: column; }
             .container { padding: 20px; }
+            .schedule-item { flex-direction: column; }
+            .schedule-date { margin-bottom: 5px; }
         }
     </style>
 </head>
@@ -211,7 +232,25 @@
     </section>
 
     <section>
-        <h2>3. 初期投資コスト (3,000台規模)</h2>
+        <h2>3. 今後のスケジュール</h2>
+        <ul class="schedule-list">
+            <li class="schedule-item">
+                <span class="schedule-date">2026年 春〜夏</span>
+                <span class="schedule-content"><strong>プロトタイプによるテスト運用：</strong> 特定エリアの一部店舗で実証実験を開始。</span>
+            </li>
+            <li class="schedule-item">
+                <span class="schedule-date">2026年 秋</span>
+                <span class="schedule-content"><strong>量産体制構築・安全基準クリア：</strong> 金型製作、PSE等の安全認証取得を完了。</span>
+            </li>
+            <li class="schedule-item">
+                <span class="schedule-date">2026年 冬</span>
+                <span class="schedule-content"><strong>全国ロールアウト：</strong> 全国の店舗へ順次設置・本格サービスイン。</span>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>4. 初期投資コスト (3,000台規模)</h2>
         <table>
             <tr>
                 <th>項目</th>
@@ -242,7 +281,7 @@
     </section>
 
     <section>
-        <h2>4. 収支モデルシミュレーション（ロイヤリティ50:50）</h2>
+        <h2>5. 収支モデルシミュレーション（ロイヤリティ50:50）</h2>
         <h3>■ 1店舗あたりの月間収支</h3>
         <table>
             <tbody>
@@ -276,7 +315,7 @@
     </section>
 
     <section>
-        <h2>5. 投資回収・収益性指標（アップデート版）</h2>
+        <h2>6. 投資回収・収益性指標</h2>
         <div class="card-container">
             <div class="card">
                 <span class="status-badge">回収期間 (PBP)</span>
@@ -297,7 +336,7 @@
     </section>
 
     <section>
-        <h2>6. 開発フェーズ（PoC 1号機仕様）</h2>
+        <h2>7. 開発フェーズ（PoC 1号機仕様）</h2>
         <div class="cost-summary">
             <p>外部委託によるプロトタイプ開発概算：<strong>約250万〜350万円</strong></p>
             <ul style="font-size: 0.85em;">
